@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Parecer jurídico por advogado OAB. Via WhatsApp. Sem burocracia.">
 <title>AdvogaJá — Seu Direito ao alcance de uma mensagem</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18388392154"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18388392154');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -35,7 +43,7 @@
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-    padding: 48px 24px 32px;
+    padding: 48px 24px 28px;
     text-align: center;
   }
 
@@ -79,7 +87,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 48px 0 40px;
+    padding: 44px 0 36px;
     max-width: 380px;
   }
 
@@ -173,7 +181,40 @@
     margin: 0 auto;
   }
 
+  /* ── NAVEGAÇÃO ────────────────────────── */
+  .nav-inst {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    max-width: 460px;
+    margin-bottom: 18px;
+  }
+
+  .nav-inst a {
+    font-size: 0.74rem;
+    letter-spacing: 0.02em;
+    color: var(--gray);
+    text-decoration: none;
+    padding: 3px 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-inst a:hover {
+    color: var(--white);
+    border-bottom-color: var(--gold);
+  }
+
   /* ── FOOTER ───────────────────────────── */
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
   footer {
     font-size: 0.62rem;
     color: var(--gray);
@@ -183,8 +224,10 @@
   }
 
   @media (min-width: 600px) {
-    body { padding: 64px 40px 40px; }
+    body { padding: 64px 40px 36px; }
     .headline { font-size: 3.4rem; }
+    .nav-inst { gap: 8px 26px; }
+    .nav-inst a { font-size: 0.78rem; }
   }
 </style>
 </head>
@@ -193,22 +236,15 @@
 <!-- LOGO -->
 <div class="logo" role="banner">
   <svg class="logo-seal" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <!-- Anéis externos -->
     <circle cx="44" cy="44" r="41" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
     <circle cx="44" cy="44" r="34" fill="none" stroke="#C9A84C" stroke-width="1"/>
-    <!-- Pernas do A (spread largo, ápice alto) -->
     <line x1="22" y1="71" x2="44" y2="17" stroke="#C9A84C" stroke-width="2.8" stroke-linecap="round"/>
     <line x1="66" y1="71" x2="44" y2="17" stroke="#C9A84C" stroke-width="2.8" stroke-linecap="round"/>
-    <!-- Viga da balança — longa, além das pernas -->
     <line x1="11" y1="47" x2="77" y2="47" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
-    <!-- Poste central da balança -->
     <line x1="44" y1="47" x2="44" y2="38" stroke="#C9A84C" stroke-width="1.6" stroke-linecap="round"/>
-    <!-- Pivot -->
     <circle cx="44" cy="47" r="2.2" fill="#C9A84C"/>
-    <!-- Correntes + prato esquerdo -->
     <line x1="11" y1="47" x2="8"  y2="59" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>
     <line x1="3"  y1="59" x2="15" y2="59" stroke="#C9A84C" stroke-width="2"   stroke-linecap="round"/>
-    <!-- Correntes + prato direito (ligeiramente mais baixo) -->
     <line x1="77" y1="47" x2="80" y2="61" stroke="#C9A84C" stroke-width="1.4" stroke-linecap="round"/>
     <line x1="74" y1="61" x2="86" y2="61" stroke="#C9A84C" stroke-width="2"   stroke-linecap="round"/>
   </svg>
@@ -245,11 +281,23 @@
   </p>
 </main>
 
-<!-- FOOTER -->
-<footer>
-  <p>ALDO SILAS DE BARCELLOS RIBEIRO SOC. DE ADVOCACIA — CNPJ 59.894.959/0001-60</p>
-  <p>advogaja.com.br</p>
-</footer>
+<!-- RODAPÉ -->
+<div class="rodape">
+  <nav class="nav-inst" aria-label="Páginas institucionais">
+    <a href="https://exemplos.advogaja.com.br/quem-somos.html">Quem somos</a>
+    <a href="https://exemplos.advogaja.com.br/o-que-fazemos.html">O que fazemos</a>
+    <a href="https://exemplos.advogaja.com.br/como-funciona.html">Como funciona</a>
+    <a href="https://exemplos.advogaja.com.br/exemplos.html">Exemplos de parecer</a>
+    <a href="https://exemplos.advogaja.com.br/duvidas.html">Dúvidas frequentes</a>
+    <a href="https://exemplos.advogaja.com.br/termos.html">Termos de uso</a>
+    <a href="https://exemplos.advogaja.com.br/privacidade.html">Privacidade</a>
+  </nav>
+
+  <footer>
+    <p>ALDO SILAS DE BARCELLOS RIBEIRO SOC. DE ADVOCACIA — CNPJ 59.894.959/0001-60</p>
+    <p>advogaja.com.br</p>
+  </footer>
+</div>
 
 </body>
 </html>
